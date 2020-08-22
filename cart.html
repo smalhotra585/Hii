@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/cart.css">
+	<title>Cart-Taj India</title>
+    <script src="https://kit.fontawesome.com/2433e873a9.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!--Header Starts Here-->
+     <header id="menuHeader">
+       <div class="container">
+           <div class="row">
+               <div class="col-sm-3 col-md-4">
+                   <p id="contactDetails">Kölnstrasse 49, 53111 Bonn - Tel: 022868469338</p>
+               </div>
+                <div class="col-sm-9 col-md-8">
+                   <ul class="list-inline social-buttons">
+                          <li><button class="btn btn-primary"><i class="fas fa-thumbs-up"></i> Like</button></li>
+                            <li><button class="btn btn-primary">Share</button></li>
+                            <li><p class="fadeshow">1.1k people like this <a href="#">Sign Up</a> to see.</p></li>
+                           <li>Follow Us: </li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            </li>
+                            <li><a href="#">
+                               <i class="fas fa-map-marker-alt"></i>
+                            </a>
+                            </li>
+                            
+                            <li><button  class="btn btn-lg fadeshow callbigButton"><i class="fas fa-phone-volume"></i> Call Waiter</button></li>
+                        </ul>
+               </div>
+               
+           </div>
+       </div>
+   </header>
+<!--Header Ends Here-->
+
+<!--   Navbar Starts Here-->
+    <nav id="navbar" class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="image/Taj_India_White_Logo-1.png" alt=""></a>
+      <p id="callButton"><a href="#"><i class="fas fa-phone-volume"></i></a></p>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+       
+        <li><a href="#">Homepage</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Restaurant <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Gallery</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Catering</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Feedback</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Menu Card</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav> 
+<!--Navbar Ends Here-->
+    
+<!--Parralax Starts Here-->
+    <div class="header" style="background-image: url(image/Parralax/cart.jpg)">
+        <h1 id="heading">YOUR CART</h1>
+        <h3 id="subheading">Here is cooked with love.</h3>
+    </div>
+<!--Parralax Ends Here-->
+    
+<!--Table Starts Here-->
+  <div class="row">
+      <div class="col-xs-12">
+        <table id="items" class="table">
+            <thead>
+                <th>Item Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </thead>
+            <tr>
+                <td>Punjabi Menu
+                    <p class="spicelvl">(Extra Scharf)</p>
+                </td>
+                <td class="center">
+                    <span class="quantityBtn">
+                                <span class="minusBtn incdecbutton">-</span>
+                                <span class="mainBtn">1</span>
+                                <span class="plusBtn incdecbutton">+</span>
+                         </span>
+                </td>
+                <td>€38.00</td>
+            </tr>  
+            <tr>
+                <td>Jalandhari Samose
+                    <p class="spicelvl">(Normal)</p>
+                </td>
+                <td class="center">
+                    <span class="quantityBtn">
+                                <span class="minusBtn incdecbutton">-</span>
+                                <span class="mainBtn">1</span>
+                                <span class="plusBtn incdecbutton">+</span>
+                         </span>
+                </td>
+                <td>€3.20</td>
+            </tr>  
+            <tr>
+                <td>Mix Raita
+                    <p class="spicelvl">(Scharf)</p>
+                </td>
+                <td class="center">
+                    <span class="quantityBtn">
+                                <span class="minusBtn incdecbutton">-</span>
+                                <span class="mainBtn">1</span>
+                                <span class="plusBtn incdecbutton">+</span>
+                         </span>
+                </td>
+                <td>€2.00</td>
+            </tr>  
+            <tr>
+                <td>Navratna Mix-Veg-Biryaani
+                <p class="spicelvl">(Mittel Scharf)</p>
+                <p id="addon">Extra Soße (+2.50 €) <button id="remadd" class="btn btn-danger"><i class="fas fa-trash"></i></button></p>
+                </td>
+                <td class="center">
+                    <span class="quantityBtn">
+                                <span class="minusBtn incdecbutton">-</span>
+                                <span class="mainBtn">1</span>
+                                <span class="plusBtn incdecbutton">+</span>
+                         </span>
+                </td>
+                <td>€8.70</td>
+            </tr>  
+</table>
+       <table id="amount" class="table">
+           <tfoot>
+                <th>Total Bill</th>
+                <th>€58.00</th>
+            </tfoot>
+       </table>
+        
+     <div class="col-sm-12">
+         <button class="addMore">Add More Items</button>
+     </div>
+     </div>
+  </div> 
+<!--Table Ends Here-->
+    
+  
+<!--Bring Before Label  -->
+    <div class="row" id="bring">
+        <div class="col-xs-8">
+             <label for="bring">Wahlen Sie Elemente aus, die als Statue dienen sollen</label>
+        </div>
+        <div class="col-xs-4">
+            <label class="switchb">
+                  <input type="checkbox" checked>
+                  <span class="sliderb round"></span>
+            </label>
+        </div>
+    </div>
+<!--Bring Before Label  -->
+    
+
+<!--Message Section Starts-->
+ <section id="contact">
+        <div class="container">
+
+                        <div class="row">
+                                 <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" placeholder="Any Special Description for your Food (optional)" id="message"></textarea>
+                                </div>
+                            </div>
+                        </div> 
+
+                </div>
+
+    </section> 
+<!--Message Section Ends   -->
+    
+<!--Footer Starts Here-->
+<footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4"><span class="copyright">© 2020 brinegdesign - Design ist meine Leidenschaft</span></div>
+                    <div class="col-md-4">
+                         <ul class="list-inline social-buttonsf">
+                           <li>Follow Us:</li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            </li>
+                            <li><a href="#">
+                               <i class="fa fa-linkedin"></i>
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="list-inline quicklinks">
+                        <li><a href="#">Legal Notice</a>
+                        </li>
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>       
+<!--Footer Ends Here-->
+    
+<!--Place Order Fixed-->
+    <div class="col-sm-12"><a id="orderButton" class="btn btn-lg" href="#">Confirm Order</a></div> 
+<!--Place Order Fixed-->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script>
+        //Sticky Navbar Function
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+        
+        
+        $(".incdecbutton").on("click", function() {
+
+              var $button = $(this);
+              var oldValue = $button.parent().find(".mainBtn").text();
+
+              if ($button.text() == "+") {
+                  var newVal = parseFloat(oldValue) + 1;
+                } else {
+               // Don't allow decrementing below zero
+                if (oldValue > 0) {
+                  var newVal = parseFloat(oldValue) - 1;
+                } else {
+                  newVal = 0;
+                }
+              }
+              $button.parent().find(".mainBtn").text(newVal);
+
+            });
+        
+        $("#remadd").on("click", function(){
+           $("#addon").css("display", "none"); 
+        });
+    </script>
+
+</body>
+
+</html>
