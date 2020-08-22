@@ -15,7 +15,6 @@ html{
 /*###########################################################################################################*/
 #menuHeader{
     font-size: 14px;
-/*    font-weight: bold;*/
     font-family: 'Cabin', sans-serif;
 }
 #menuHeader .row li a{
@@ -42,6 +41,7 @@ header .row ul li .callbigButton:active{
      padding: 0px 13px 15px 10px;
      margin-bottom: 0px;
      z-index: 12;
+     border: none;
  }
 
 #navbar .container-fluid li a{
@@ -446,7 +446,6 @@ section#contact :-ms-input-placeholder {
 /*###########################################################################################################*/
 footer {
  font-size: 15px;
- font-weight: 500;
   padding: 15px 0;
   text-align: center;
   color: #fff;
@@ -498,6 +497,7 @@ footer .social-buttonsf a:hover{
   bottom: 0;
   width: 100%;
   background-color: #5C1313;
+  border-radius: 0px;
   color: white;
   text-align: center;
   font-size: 30px; 
