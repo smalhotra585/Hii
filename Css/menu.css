@@ -374,7 +374,15 @@ header .row .social-buttons li i{
   background-repeat: no-repeat;
  background-size: cover;
 }
-
+@media only screen and (max-device-width : 768px) { 
+  .parallax{
+ background-attachment:scroll !important;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+  
+}
+}
 }
  .parallax .center{
     width: 100%;
