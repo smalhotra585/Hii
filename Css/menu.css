@@ -372,9 +372,7 @@ header .row .social-buttons li i{
 .parallax {
   height: 350px;
   background-attachment: fixed;
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
 }
  .parallax .center{
     width: 100%;
