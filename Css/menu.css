@@ -373,6 +373,12 @@ header .row .social-buttons li i{
   height: 350px;
   background-repeat: no-repeat;
  background-size: cover;
+ background-attachment: fixed;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .ios.parralax {
+        background-attachment: scroll;
+    }
 }
  .parallax .center{
     width: 100%;
