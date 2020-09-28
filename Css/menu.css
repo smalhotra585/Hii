@@ -619,7 +619,28 @@ footer .social-buttonsf a:hover{
         transform: rotate(0);
     }
 }
-
+@-webkit-keyframes count{
+   from{
+       -webkit-top: -18rem;
+       -webkit-transform: rotate(120deg);
+   }
+   25%{
+       -webkit-top: -8rem;
+       -webkit-transform: rotate(80deg);
+   }
+   50%{
+       -webkit-top: -9rem;
+       -webkit-transform: rotate(60deg);
+   }
+   75%{
+       -webkit-top: -10rem;
+       -webkit-transform: rotate(30deg);
+   }
+   to{
+       -webkit-top: -12rem;
+       -webkit-transform: rotate(0);
+   }
+}
 /*###########################################################################################################*/
 /*Place Order Ends*/
 /*###########################################################################################################*/
