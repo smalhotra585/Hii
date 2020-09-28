@@ -18,27 +18,6 @@ function showSlides() {
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
-var _img = document.getElementById('id1');
-var newImg = new Image;
-newImg.onload = function() {
-    _img.src = this.src;
-}
-newImg.src = 'file:///C:/Users/hp/Desktop/Taj/image/ImageSlider/slideImage1.jpg';
-
-var _img1 = document.getElementById('id2');
-var newImg1 = new Image;
-newImg1.onload = function() {
-    _img1.src = this.src;
-}
-newImg1.src = 'file:///C:/Users/hp/Desktop/Taj/image/ImageSlider/slideImage2.jpg';
-
-
-var _img2 = document.getElementById('id3');
-var newImg2 = new Image;
-newImg2.onload = function() {
-    _img2.src = this.src;
-}
-newImg2.src = 'file:///C:/Users/hp/Desktop/Taj/image/ImageSlider/slideImage3.jpg';
 
 
 //Quantity inc dec button
