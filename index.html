@@ -4,62 +4,54 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" media="screen" href="Css/bootstrap.min.css">
     <link rel="stylesheet" href="Css/menu.css">
+    <link rel="shortcut icon" type="image/png" href="image/favicon.jpg">
 	<title>Menu Card-Taj India</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/2433e873a9.js"></script>
+   
+    
 </head>
 
+
 <body>
-<!--  Navbar Header Starts Here-->
-   <header id="menuHeader">
-       <div class="container">
-           <div class="row">
-               <div class="col-sm-3 col-md-4">
-                   <p id="contactDetails">Kölnstrasse 49, 53111 Bonn - Tel: 022868469338</p>
-               </div>
-                <div class="col-sm-9 col-md-8">
-                   <ul class="list-inline social-buttons">
-                          <li><button class="btn btn-primary"><i class="fas fa-thumbs-up"></i> Like</button></li>
-                            <li><button class="btn btn-primary">Share</button></li>
-                            <li><p class="fadeshow">1.1k people like this <a href="#">Sign Up</a> to see.</p></li>
-                           <li>Follow Us: </li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                            </li>
-                            <li><a href="#">
-                               <i class="fas fa-map-marker-alt"></i>
-                            </a>
-                            </li>
-                            
-                            <li><button  class="btn btn-lg fadeshow callbigButton"><i class="fas fa-phone-volume"></i> Call Waiter</button></li>
-                        </ul>
-               </div>
-               
-           </div>
-       </div>
-   </header>
- <!--  Navbar Header Ends Here--> 
-   
+<!--Preloader-->
+    <div class="preloader-wrapper">
+            <div class="preloder-bg"></div>
+            <div class="la-timer la-dark la-3x">
+                <div>
+                </div>
+            </div>
+        </div>
+<!--Preloader-->
+
+<!--Pop Up Box-->
+<div class="modal" id="modal2" data-animation="mixInAnimations">
+  <div class="modal-dialog">
+    <header class="modal-header">Call Waiter</header>
+    <section class="modal-content">
+      <p>Your Waiter Will be Here Soon.</p>
+      <button id="close" class="close-modal" aria-label="close modal" data-close>
+        Close  
+      </button>
+    </section>
+  </div>
+</div>
+
+<!--Pop Up Box-->
+
 <!--Navbar Starts Here -->   
     <nav id="navbar" class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+      <button style="color: #FFECB1" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span style="background-color: #FFECB1" class="sr-only">Toggle navigation</span>
+        <span style="background-color: #FFECB1" class="icon-bar"></span>
+        <span style="background-color: #FFECB1" class="icon-bar"></span>
+        <span style="background-color: #FFECB1" class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#"><img src="image/Taj_India_White_Logo-1.png" alt=""></a>
-      <p id="callButton"><a href="#"><i class="fas fa-phone-volume"></i></a></p>
+      <a href="#" id="callButton" type="button" class="open-modal" data-open="modal2"><img src="image/waiter.png" alt=""></a>   
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -67,42 +59,68 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
        
+        
+        <li><a href="#">
+           All  
+        </a></li>
         <li><a href="#">Homepage</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Restaurant <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Gallery</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Catering</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Feedback</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Contact Us</a></li>
         <li><a href="#">Menu Card</a></li>
-        <li><a href="#">About Us</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav> 
 <!--Navbar Ends Here-->
  
+<!--SearchBar-->
+<div class="row">
+               <div class="col-xs-12">
+                   <form method="get" action="/search" id="searchbox5">
+                    <input id="search51" onkeyup="myfood()" name="q" type="text" size="40" placeholder="Search..." />
+                </form>
+               </div>
+           </div>  
+<!--SearchBar-->
+
+ 
 <!--ImageSlider Starts Here-->
   <div class="imageSlider">
     <div class="row">
-        <div class="col-xs-12 imageEffect twentytwenty-container">
-            <img src="image/ImageSlider/slideImage1.jpg" alt="">
-            <img src="image/ImageSlider/slideImage2.jpg" alt="">
+        <div class="col-xs-12">
+            <div class="mySlides fade">
+                  <img id="id1" src="">
+                  <div class="text">Welcome To</div>
+                </div>
+
+                <div class="mySlides fade">
+                  <img id="id2" src="">
+                  <div class="text">Taj India Restaurant</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img id="id3" src="">
+                  <div class="text">Here Food is Cooked With Love</div>
+                </div>
+
         </div>
      </div>
     </div> 
+    <br>
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
 <!--ImageSlider Ends Here -->
  
+
 <!--Menu Starts Here   -->
     <section id="menu">
     <div class="container-fluid">
+       
         <h1 id="thali" class="text-center main-header">Menu</h1>
         <span class="double-border-seprator"></span>
+        
+        
                <div class="row">
                     <button class="collapsible">
                       <div class="col-xs-9"> <span class="menu-title">Namo Namo Menu (VEG.)</span></div>
@@ -129,21 +147,71 @@
                           <div class="col-sm-9 col-lg-12"><h4>8.Mitha swaad</h4></div>
                           <div class="col-sm-3 col-lg-12"><p class="text-muted">&nbsp;&nbsp;(Nachspeise)</p></div>
                           </div>
-                          <div class="row">
-                              <div class="col-xs-4"><label id="priceLabel" for="price">Preis (€) :</label></div>
-                              <div class="col-xs-8">
-                                <select id="price">
+                          <div class="row form-group">
+                              <div style="margin-bottom: 0px" class="col-xs-5"><label id="priceLabel" for="price">Preis (€) :</label></div>
+                              <div class="col-xs-7">
+                                <select class="form-control" id="price" style="margin-bottom: 0px">
                                  <option value="None">None</option>
                                   <option value="36.00 €">36.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Two Persons</option>
                                   <option value="54.00 €">54.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Three Persons</option>
                                   <option value="72.00 €">72.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Four Persons</option>
                                   </select></div>
                             </div>
+                            <div class="row form-group">
+                               <div style="margin-bottom: 0px" class="col-xs-5"><label id="priceLabel" for="price">Scharf :</label></div>
+                                <div class="col-xs-7 ">
+                                <select class="form-control" id="spiceLevelthali" style="margin-bottom: 0px" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                                </div>
+                            </div>
                             <div class="row">
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button type="button" disabled="disabled" class="btn addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                              </div>
+                             <div class="row">
+                                 <div class="col-xs-12">
+                                     <span class="single-border-seprator"></span>
+                            <p style="text-align: center;width: 100%;font-size: 18px;line-height: 24px">* It is best served with</p>
+                                 </div>
+                             </div>
+                             <div class="row">
+                                <div class="col-xs-5">
+                                    <label class="extradish" for="extradish">Tandoori Roti <br> <span class="extraprice">(+2.50 €)</span></label>
+                                </div>
+                                <div class="col-xs-7">
+                                    <button class="addextra btn btn-default">Add +</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <label class="extradish" for="extradish">Tandoori Roti <br> <span class="extraprice">(+2.50 €)</span></label>
+                                </div>
+                                <div class="col-xs-7">
+                                    <button class="addextra btn btn-default">Add +</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <label class="extradish" for="extradish">Tandoori Roti Naan <br> <span class="extraprice">(+2.50 €)</span></label>
+                                </div>
+                                <div class="col-xs-7">
+                                    <button class="addextra btn btn-default">Add +</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <label class="extradish" for="extradish">Tandoori Roti <br> <span class="extraprice">(+2.50 €)</span></label>
+                                </div>
+                                <div class="col-xs-7">
+                                    <button class="addextra btn btn-default">Add +</button>
+                                </div>
+                            </div>
                             
                    </div>
                 </div>
@@ -173,19 +241,31 @@
                           <div class="col-sm-9 col-lg-12"><h4>8.Mitha swaad</h4></div>
                           <div class="col-sm-3 col-lg-12"><p class="text-muted">&nbsp;&nbsp;(Nachspeise)</p></div>
                           </div>
-                          <div class="row">
-                              <div class="col-xs-4"><label id="priceLabel" for="price">Preis (€) :</label></div>
-                              <div class="col-xs-8">
-                                <select id="price">
+                           <div class="row form-group">
+                              <div style="margin-bottom: 0px" class="col-xs-5"><label id="priceLabel" for="price">Preis (€) :</label></div>
+                              <div class="col-xs-7">
+                                <select class="form-control" id="price" style="margin-bottom: 0px">
                                  <option value="None">None</option>
-                                  <option value="38.00 €">36.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Two Persons</option>
+                                  <option value="36.00 €">36.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Two Persons</option>
                                   <option value="54.00 €">54.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Three Persons</option>
-                                  <option value="75.00 €">72.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Four Persons</option>
+                                  <option value="72.00 €">72.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Four Persons</option>
                                   </select></div>
+                            </div>
+                            <div class="row form-group">
+                               <div style="margin-bottom: 0px" class="col-xs-5"><label id="priceLabel" for="price">Scharf :</label></div>
+                                <div class="col-xs-7 ">
+                                <select class="form-control" id="spiceLevelthali" style="margin-bottom: 0px" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                                </div>
                             </div>
                             <div class="row">
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button type="button" disabled="disabled" class="btn addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                              </div>
                         
@@ -219,19 +299,31 @@
                           <div class="col-sm-9 col-lg-12"><h4>9.Mitha swaad</h4></div>
                           <div class="col-sm-3 col-lg-12"><p class="text-muted">&nbsp;&nbsp;(Nachspeise)</p></div>
                             </div> 
-                          <div class="row">
-                              <div class="col-xs-4"><label id="priceLabel" for="price">Preis (€) :</label></div>
-                              <div class="col-xs-8">
-                                <select id="price">
+                           <div class="row form-group">
+                              <div style="margin-bottom: 0px" class="col-xs-5"><label id="priceLabel" for="price">Preis (€) :</label></div>
+                              <div class="col-xs-7">
+                                <select class="form-control" id="price" style="margin-bottom: 0px">
                                  <option value="None">None</option>
-                                  <option value="38.00 €">44.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Two Persons</option>
-                                  <option value="54.00 €">66.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Three Persons</option>
-                                  <option value="75.00 €">88.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Four Persons</option>
+                                  <option value="36.00 €">36.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Two Persons</option>
+                                  <option value="54.00 €">54.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Three Persons</option>
+                                  <option value="72.00 €">72.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Four Persons</option>
                                   </select></div>
+                            </div>
+                            <div class="row form-group">
+                               <div style="margin-bottom: 0px" class="col-xs-5"><label id="priceLabel" for="price">Scharf :</label></div>
+                                <div class="col-xs-7 ">
+                                <select class="form-control" id="spiceLevelthali" style="margin-bottom: 0px" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                                </div>
                             </div>
                             <div class="row">
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button type="button" disabled="disabled" class="btn addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                              </div>
                           
@@ -266,19 +358,31 @@
                           <div class="col-sm-9 col-lg-12"><h4>9.Mitha swaad</h4></div>
                           <div class="col-sm-3 col-lg-12"><p class="text-muted">&nbsp;&nbsp;(Nachspeise)</p></div>
                          </div>
-                          <div class="row">
-                              <div class="col-xs-4"><label id="priceLabel" for="price">Preis (€) :</label></div>
-                              <div class="col-xs-8">
-                                <select id="price">
+                          <div class="row form-group">
+                              <div style="margin-bottom: 0px" class="col-xs-5"><label id="priceLabel" for="price">Preis (€) :</label></div>
+                              <div class="col-xs-7">
+                                <select class="form-control" id="price" style="margin-bottom: 0px">
                                  <option value="None">None</option>
-                                  <option value="38.00 €">52.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Two Persons</option>
-                                  <option value="54.00 €">69.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Three Persons</option>
-                                  <option value="75.00 €">104.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Four Persons</option>
+                                  <option value="36.00 €">36.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Two Persons</option>
+                                  <option value="54.00 €">54.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Three Persons</option>
+                                  <option value="72.00 €">72.00 €&nbsp;&nbsp;/&nbsp;&nbsp;Four Persons</option>
                                   </select></div>
                             </div>
-                           <div class="row">
+                            <div class="row form-group">
+                               <div style="margin-bottom: 0px" class="col-xs-5"><label id="priceLabel" for="price">Scharf :</label></div>
+                                <div class="col-xs-7 ">
+                                <select class="form-control" id="spiceLevelthali" style="margin-bottom: 0px" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="row">
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button type="button" disabled="disabled" class="btn addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                              </div> 
                     </div>              
@@ -290,37 +394,32 @@
 <!--Menu Ends Here-->
 
 <!--Parallax Starts Here-->
-   <div class="parallax"  style="background-image: url(image/Parralax/parralax.jpg)">
+   <div class="parallax img-responsive">
         <div class="center">
              <h1 id="snacks">Kuch Halka Fulka (Vorspeisen)</h1>
        </div>
   </div>
 
 <!--Parallax Ends Here-->
-   
+ 
+ 
 <!--Menu 2 Starts Here-->
 <section id="menu">
     <div class="container-fluid">
      <div class="row">
                     <button class="collapsible">
                       <div class="col-xs-9"> <span class="menu-title">Jalandhari Samose</span></div>
-                      <div class="col-xs-3"><h5 class="item-price">€3.20</h5></div>
+                      <div class="col-xs-3"><h5 class="item-price">€ 3.20</h5></div>
                        <div class="col-xs-10"><p class="menu-subtitle">Zwei Teigtaschen mit herzhafter Füllung (Gewürztes Gemüse, Mandeln, Rosinen)</p></div>
                         </button>
                      <div class="content" id="fooditems">
                         
                         <div class="row quantityandspice">
-                            <div class="col-xs-12"><div class="container"><img src="image/Menu/Mueg_haryali_chaap.jpg" class="img-responsive orderimg" style="border-radius: 20px" height="150px"  alt="" ></div></div>
+<!--                            <div class="col-xs-12"><div class="container"><img src="image/Menu/Mueg_haryali_chaap.jpg" class="img-responsive orderimg" style="border-radius: 20px" height="150px" style="margin-bottom: 10px"  alt="" ></div></div>-->
                             </div>
-                         <div class="row">
+                         <div class="row form-group">
                          <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
+                                 <label id="selectquan" for="addOns">Select Quantity</label>
                          </div>
                          <div class="col-xs-5 quantityMargin">
                          <span class="quantityBtn">
@@ -329,10 +428,29 @@
                                 <span class="plusBtn incdecbutton">+</span>
                          </span>
                          </div>
+                         
+                            </div>
+                             <div class="row">
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button class="btn addToCart" disabled="disabled"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 </div>
                              </div>
-                          </div>
+                             
+                             <div class="row">
+                                 <div class="col-xs-12">
+                                     <span class="single-border-seprator"></span>
+                            <p style="text-align: center;width: 100%;font-size: 18px">* It is best served with</p>
+                                 </div>
+                             </div>
+                             <div class="row">
+                                <div class="col-xs-5">
+                                    <label class="extradish" for="extradish">Tandoori Roti <br> <span class="extraprice">(+2.50 €)</span></label>
+                                </div>
+                                <div class="col-xs-7">
+                                    <button class="addextra btn btn-default">Add +</button>
+                                </div>
+                            </div>
+                          
                           
                         </div>
                    </div>
@@ -343,29 +461,8 @@
                        <div class="col-xs-10"><p class="menu-subtitle">Zwei Teigtaschen mit herzhafter Füllung (Huhn, Rosinen, Mandeln)</p></div>
                         </button>
                         <div class="content" id="fooditems">
-                         <div class="row quantityandspice">
-                         <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
-                         </div>
-                         <div class="col-xs-5 quantityMargin">
-                         <span class="quantityBtn">
-                                <span class="minusBtn incdecbutton">-</span>
-                                <span class="mainBtn">1</span>
-                                <span class="plusBtn incdecbutton">+</span>
-                         </span>
-                         </div>
-                        
-                             <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
-                             </div>
-                    
-                          
+                         <div class="row unavilable">
+                             <h2>Sorry This Item is Currently Unavilable!</h2> 
                         </div>
                    </div>
               </div>
@@ -378,15 +475,6 @@
                         </button>
                         <div class="content" id="fooditems">
                          <div class="row quantityandspice">
-                         <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
-                         </div>
                          <div class="col-xs-5 quantityMargin">
                          <span class="quantityBtn">
                                 <span class="minusBtn incdecbutton">-</span>
@@ -394,30 +482,48 @@
                                 <span class="plusBtn incdecbutton">+</span>
                          </span>
                          </div>
-                          
+                         <div class="col-xs-7 form-group">
+                              <select class="form-control" id="spiceLevel" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                         </div>
+                         </div>
+                          <div class="row">
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button class="btn addToCart" disabled="disabled"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                             </div>
+                             </div>
+                             <div class="row">
+                                 <div class="col-xs-12">
+                                     <span class="single-border-seprator"></span>
+                            <p style="text-align: center;width: 100%;font-size: 18px">* It is best served with</p>
+                                 </div>
                              </div>
                              
-                        </div>
+                             
+                        
                    </div>
               </div>
               
               
      </div>
 </section>
-
 <!--Menu 2 ends Here-->
 
 <!--Parallax Starts Here-->
 
-   <div class="parallax" style="background-image: url(image/Parralax/parralax.jpg)">
+   <div class="parallax">
         <div class="center">
              <h1>Kuch Sath Sath (Beilagen)</h1>
        </div>
   </div>
 <!--Parallax Ends Here-->
  
+
 <!--Menu 3 Starts Here-->
 <section id="menu">
     <div class="container-fluid">
@@ -429,15 +535,6 @@
                         </button>
                         <div class="content" id="fooditems">
                          <div class="row quantityandspice">
-                         <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
-                         </div>
                          <div class="col-xs-5 quantityMargin">
                          <span class="quantityBtn">
                                 <span class="minusBtn incdecbutton">-</span>
@@ -445,9 +542,19 @@
                                 <span class="plusBtn incdecbutton">+</span>
                          </span>
                          </div>
+                         <div class="col-xs-7 form-group">
+                              <select class="form-control" id="spiceLevel" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                         </div>
+                         
                          
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button class="btn addToCart" disabled="disabled"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                     
                          </div>
@@ -462,15 +569,6 @@
                         </button>
                         <div class="content" id="fooditems">
                          <div class="row quantityandspice">
-                         <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
-                         </div>
                          <div class="col-xs-5 quantityMargin">
                          <span class="quantityBtn">
                                 <span class="minusBtn incdecbutton">-</span>
@@ -478,9 +576,19 @@
                                 <span class="plusBtn incdecbutton">+</span>
                          </span>
                          </div>
+                         <div class="col-xs-7 form-group">
+                              <select class="form-control" id="spiceLevel" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                         </div>
+                         
                         
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button class="btn addToCart" disabled="disabled"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                             
                          </div>
@@ -495,15 +603,6 @@
                         </button>
                         <div class="content" id="fooditems">
                          <div class="row quantityandspice">
-                         <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
-                         </div>
                          <div class="col-xs-5 quantityMargin">
                          <span class="quantityBtn">
                                 <span class="minusBtn incdecbutton">-</span>
@@ -511,9 +610,19 @@
                                 <span class="plusBtn incdecbutton">+</span>
                          </span>
                          </div>
+                         <div class="col-xs-7 form-group">
+                              <select class="form-control" id="spiceLevel" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                         </div>
+                         
                         
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button class="btn addToCart" disabled="disabled"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                             
                          </div>
@@ -528,15 +637,6 @@
                         </button>
                         <div class="content" id="fooditems">
                          <div class="row quantityandspice">
-                         <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
-                         </div>
                          <div class="col-xs-5 quantityMargin">
                          <span class="quantityBtn">
                                 <span class="minusBtn incdecbutton">-</span>
@@ -544,9 +644,19 @@
                                 <span class="plusBtn incdecbutton">+</span>
                          </span>
                          </div>
+                         <div class="col-xs-7 form-group">
+                              <select class="form-control" id="spiceLevel" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                         </div>
+                         
                          
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button class="btn addToCart" disabled="disabled"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                             
                          </div>
@@ -556,17 +666,17 @@
 
      </div>
 </section>
-
 <!--Menu 3 ends Here-->  
 
 <!--Parallax Starts Here-->
-   <div class="parallax" style="background-image: url(image/Parralax/parralax.jpg)">
+   <div id="sss" class="parallax">
         <div class="center">
              <h1>Salate</h1>
        </div>
   </div>
 <!--Parallax Ends Here-->
  
+
 <!--Menu 4 Starts Here-->
 <section id="menu">
     <div class="container-fluid">
@@ -578,15 +688,6 @@
                         </button>
                         <div class="content" id="fooditems">
                          <div class="row quantityandspice">
-                         <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
-                         </div>
                          <div class="col-xs-5 quantityMargin">
                          <span class="quantityBtn">
                                 <span class="minusBtn incdecbutton">-</span>
@@ -594,48 +695,26 @@
                                 <span class="plusBtn incdecbutton">+</span>
                          </span>
                          </div>
+                         <div class="col-xs-7 form-group">
+                              <select class="form-control" id="spiceLevel" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                         </div>
+                         
                          
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button class="btn addToCart" disabled="disabled"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                              
                          </div>
                           
                         </div>
                    </div>
-        <div class="row">
-                    <button class="collapsible">
-                      <div class="col-xs-9"> <span class="menu-title">Delhi Chicken Tikka Salat</span></div>
-                      <div class="col-xs-3"><h5 class="item-price">€7.00</h5></div>
-                       <div class="col-xs-10"><p class="menu-subtitle">Grüner Salat, Zwiebeln, Gurken, Tomaten mit gebratenen Hähnchenbruststreifen</p></div>
-                        </button>
-                        <div class="content" id="fooditems">
-                         <div class="row quantityandspice">
-                         <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
-                         </div>
-                         <div class="col-xs-5 quantityMargin">
-                         <span class="quantityBtn">
-                                <span class="minusBtn incdecbutton">-</span>
-                                <span class="mainBtn">1</span>
-                                <span class="plusBtn incdecbutton">+</span>
-                         </span>
-                         </div>
-                         
-                             <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
-                             </div>
-                            
-                         </div>
-                          
-                        </div>
-                   </div>
+
         <div class="row">
                     <button class="collapsible">
                       <div class="col-xs-9"> <span class="menu-title">Kerla Salat</span></div>
@@ -644,15 +723,6 @@
                         </button>
                         <div class="content" id="fooditems">
                          <div class="row quantityandspice">
-                         <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
-                         </div>
                          <div class="col-xs-5 quantityMargin">
                          <span class="quantityBtn">
                                 <span class="minusBtn incdecbutton">-</span>
@@ -660,9 +730,19 @@
                                 <span class="plusBtn incdecbutton">+</span>
                          </span>
                          </div>
+                         <div class="col-xs-7 form-group">
+                              <select class="form-control" id="spiceLevel" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                         </div>
+                         
                         
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button class="btn addToCart" disabled="disabled"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                         
                          </div>
@@ -677,15 +757,6 @@
                         </button>
                         <div class="content" id="fooditems">
                          <div class="row quantityandspice">
-                         <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
-                         </div>
                          <div class="col-xs-5 quantityMargin">
                          <span class="quantityBtn">
                                 <span class="minusBtn incdecbutton">-</span>
@@ -693,9 +764,19 @@
                                 <span class="plusBtn incdecbutton">+</span>
                          </span>
                          </div>
+                         <div class="col-xs-7 form-group">
+                              <select class="form-control" id="spiceLevel" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                         </div>
+                         
                         
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button class="btn addToCart" disabled="disabled"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                              </div>
                     
@@ -707,14 +788,16 @@
 </section>
 <!--Menu 4 ends Here--> 
 
+
 <!--Parralax Starts Here  -->
-   <div  class="parallax" style="background-image: url(image/Parralax/parralax.jpg)">
+   <div class="parallax">
             <div class="center">
              <h1 id="breads">Naan Brote</h1> 
        </div>
   </div>
 <!--Parallax Ends Here-->
- 
+
+
 <!--Menu 5 Starts Here-->
 <section id="menu">
     <div class="container-fluid">
@@ -726,15 +809,6 @@
                         </button>
                         <div class="content" id="fooditems">
                          <div class="row quantityandspice">
-                         <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
-                         </div>
                          <div class="col-xs-5 quantityMargin">
                          <span class="quantityBtn">
                                 <span class="minusBtn incdecbutton">-</span>
@@ -742,9 +816,19 @@
                                 <span class="plusBtn incdecbutton">+</span>
                          </span>
                          </div>
+                         <div class="col-xs-7 form-group">
+                              <select class="form-control" id="spiceLevel" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                         </div>
+                         
                          
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button class="btn addToCart" disabled="disabled"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                              
                          </div>
@@ -759,15 +843,6 @@
                         </button>
                         <div class="content" id="fooditems">
                          <div class="row quantityandspice">
-                         <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
-                         </div>
                          <div class="col-xs-5 quantityMargin">
                          <span class="quantityBtn">
                                 <span class="minusBtn incdecbutton">-</span>
@@ -775,9 +850,20 @@
                                 <span class="plusBtn incdecbutton">+</span>
                          </span>
                          </div>
+                         <div class="col-xs-7 form-group">
+                             
+                              <select class="form-control" id="spiceLevel" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                         </div>
+                         
                          
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button class="btn addToCart" disabled="disabled"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                              
                          </div>
@@ -792,15 +878,6 @@
                         </button>
                         <div class="content" id="fooditems">
                          <div class="row quantityandspice">
-                         <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
-                         </div>
                          <div class="col-xs-5 quantityMargin">
                          <span class="quantityBtn">
                                 <span class="minusBtn incdecbutton">-</span>
@@ -808,9 +885,19 @@
                                 <span class="plusBtn incdecbutton">+</span>
                          </span>
                          </div>
+                         <div class="col-xs-7 form-group">
+                              <select class="form-control" id="spiceLevel" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                         </div>
+                         
                        
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button class="btn addToCart" disabled="disabled"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                             
                          </div>
@@ -825,15 +912,6 @@
                         </button>
                         <div class="content" id="fooditems">
                          <div class="row quantityandspice">
-                         <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
-                         </div>
                          <div class="col-xs-5 quantityMargin">
                          <span class="quantityBtn">
                                 <span class="minusBtn incdecbutton">-</span>
@@ -841,9 +919,19 @@
                                 <span class="plusBtn incdecbutton">+</span>
                          </span>
                          </div>
+                         <div class="col-xs-7 form-group">
+                              <select class="form-control" id="spiceLevel" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                         </div>
+                         
                          
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button class="btn addToCart" disabled="disabled"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                              
                          </div>
@@ -856,13 +944,14 @@
 <!--Menu 5 ends Here--> 
 
 <!--Paraalax Starts Here   -->
-   <div  class="parallax" style="background-image: url(image/Parralax/parralax.jpg)">
+   <div class="parallax">
             <div class="center">
              <h1 id="biryani">Biryaani</h1> 
        </div>
   </div>
 <!--Parallax Ends Here-->
  
+
 <!--Menu 6 Starts Here-->
 <section id="menu">
     <div class="container-fluid">
@@ -874,15 +963,6 @@
                         </button>
                         <div class="content" id="fooditems">
                          <div class="row quantityandspice">
-                         <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
-                         </div>
                          <div class="col-xs-5 quantityMargin">
                          <span class="quantityBtn">
                                 <span class="minusBtn incdecbutton">-</span>
@@ -890,12 +970,22 @@
                                 <span class="plusBtn incdecbutton">+</span>
                          </span>
                          </div>
+                         <div class="col-xs-7 form-group">
+                              <select class="form-control" id="spiceLevel" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                         </div>
+                         
                          </div>
                           <div class="row addones">
-                            <div class="col-xs-7">
-                                <label for="addOns">Extra Soße&nbsp;&nbsp;(+2.50 €) :</label></div>
-                                <div class="col-xs-5">
-                                <select name="addOns" id="addOns">
+                            <div class="col-xs-5">
+                                <label for="addOns">Extra Soße (+2.50 €)</label></div>
+                                <div class="col-xs-7 form-group">
+                                <select class="form-control" name="addOns" id="addOns">
                                    <option value="None">None</option>
                                     <option value="Mandel">Mandel</option>
                                     <option value="Masala-Curry">Masala-Curry</option>
@@ -906,7 +996,7 @@
                             </div>
                             <div class="row">
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button class="btn addToCart" disabled="disabled"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                              </div>
             </div>   
@@ -919,15 +1009,6 @@
                         </button>
                         <div class="content" id="fooditems">
                          <div class="row quantityandspice">
-                         <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
-                         </div>
                          <div class="col-xs-5 quantityMargin">
                          <span class="quantityBtn">
                                 <span class="minusBtn incdecbutton">-</span>
@@ -935,11 +1016,21 @@
                                 <span class="plusBtn incdecbutton">+</span>
                          </span>
                          </div>
+                         <div class="col-xs-7 form-group">
+                              <select class="form-control" id="spiceLevel" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                         </div>
+                         
                          </div>
                           <div class="row addones">
-                            <div class="col-xs-7">
-                                <label for="addOns">Extra Soße&nbsp;&nbsp;(+2.50 €) :</label></div>
-                                <div class="col-xs-5">
+                            <div class="col-xs-5">
+                                <label for="addOns">Extra Soße (+2.50 €)</label></div>
+                                <div class="col-xs-7">
                                 <select name="addOns" id="addOns">
                                    <option value="None">None</option>
                                     <option value="Mandel">Mandel</option>
@@ -951,7 +1042,7 @@
                             </div>
                             <div class="row">
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button class="btn addToCart" disabled="disabled"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                              </div>
                         </div>
@@ -964,15 +1055,6 @@
                         </button>
                         <div class="content" id="fooditems">
                          <div class="row quantityandspice">
-                         <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
-                         </div>
                          <div class="col-xs-5 quantityMargin">
                          <span class="quantityBtn">
                                 <span class="minusBtn incdecbutton">-</span>
@@ -980,12 +1062,22 @@
                                 <span class="plusBtn incdecbutton">+</span>
                          </span>
                          </div>
+                         <div class="col-xs-7 form-group">
+                              <select class="form-control" id="spiceLevel" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                         </div>
+                         
                          </div>
                           <div class="row addones">
-                            <div class="col-xs-7">
-                                <label for="addOns">Extra Soße&nbsp;&nbsp;(+2.50 €) :</label></div>
-                                <div class="col-xs-5">
-                                <select name="addOns" id="addOns">
+                            <div class="col-xs-5">
+                                <label for="addOns">Extra Soße (+2.50 €)</label></div>
+                                <div class="col-xs-7 form-group">
+                                <select class="form-control" name="addOns" id="addOns">
                                    <option value="None">None</option>
                                     <option value="Mandel">Mandel</option>
                                     <option value="Masala-Curry">Masala-Curry</option>
@@ -996,9 +1088,25 @@
                             </div>
                             <div class="row">
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button class="btn addToCart" disabled="disabled"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                              </div>
+                             <div class="row">
+                                 <div class="col-xs-12">
+                                     <span class="single-border-seprator"></span>
+                            <p style="text-align: center;width: 100%;font-size: 18px;line-height: 24px">* It is best served with</p>
+                                 </div>
+                             </div>
+                             
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <label class="extradish" for="extradish">Tandoori Roti <br> <span class="extraprice">(+2.50 €)</span></label>
+                                </div>
+                                <div class="col-xs-7">
+                                    <button class="addextra btn btn-default">Add +</button>
+                                </div>
+                            </div>
+                            
                         </div>
                    </div>
         <div class="row">
@@ -1009,15 +1117,6 @@
                         </button>
                         <div class="content" id="fooditems">
                          <div class="row quantityandspice">
-                         <div class="col-xs-7">
-                              <select id="spiceLevel" class="spiceLevel">
-                                  <option value="normal">Normal</option>
-                                  <option value="mild">Mild</option>
-                                  <option value="mild_scharf">Mittel Scharf</option>
-                                  <option value="scharf">Scharf</option>
-                                  <option value="extra_scharf">Extra Scharf</option>
-                                  </select>
-                         </div>
                          <div class="col-xs-5 quantityMargin">
                          <span class="quantityBtn">
                                 <span class="minusBtn incdecbutton">-</span>
@@ -1025,12 +1124,22 @@
                                 <span class="plusBtn incdecbutton">+</span>
                          </span>
                          </div>
+                         <div class="col-xs-7 form-group">
+                              <select class="form-control" id="spiceLevel" class="spiceLevel">
+                                  <option value="normal">Normal</option>
+                                  <option value="mild">Mild</option>
+                                  <option value="mild_scharf">Mittel Scharf</option>
+                                  <option value="scharf">Scharf</option>
+                                  <option value="extra_scharf">Extra Scharf</option>
+                                  </select>
+                         </div>
+                         
                          </div>
                           <div class="row addones">
-                            <div class="col-xs-7">
-                                <label for="addOns">Extra Soße&nbsp;&nbsp;(+2.50 €) :</label></div>
-                                <div class="col-xs-5">
-                                <select name="addOns" id="addOns">
+                            <div class="col-xs-5">
+                                <label for="addOns">Extra Soße (+2.50 €)</label></div>
+                                <div class="col-xs-7 form-group">
+                                <select class="form-control" name="addOns" id="addOns">
                                    <option value="None">None</option>
                                     <option value="Mandel">Mandel</option>
                                     <option value="Masala-Curry">Masala-Curry</option>
@@ -1041,7 +1150,7 @@
                                 </div>
                                 <div class="row">
                              <div class="col-xs-12">
-                                 <button class="addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
+                                 <button class="btn addToCart"><i class="fas fa-shopping-cart"></i> &nbsp; Add to Cart</button>
                              </div>
                              </div>
                         </div>
@@ -1049,27 +1158,8 @@
         </div>
 </section>
 <!--Menu 6 ends Here--> 
- 
-<!-- Flip Card Starts Here-->
-<div class="d-flex justify-content-center">
-<div class="image-card">
-    <img src="image/flip.jpg" alt="">
-    <h2>Opening Hours</h2>
-    <h3>Tuesday-Sunday</h3>
-    <ul class="timings">
-        <li>11:30-14:30 Clock</li>
-        <li>17:00-22:30 Clock</li>
-    </ul>
-    <h3 id="monday">Monday Closed</h3>
-    <ul id="holiday">
-        <li>Expect Public Holiday</li>
-    </ul>
 
-</div>
-    
-</div>
- 
-<!--Flip Card Ends Here-->
+
  
 <!--AsideParaalax Starts Here   -->
    <div id="parralaxaside" style="background-image: url(image/Parralax/parralax.jpg)">
@@ -1079,161 +1169,118 @@
   </div>
 <!--AsideParallax Ends Here-->
 
-<!--Contact Section Starts Here   -->
-      <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-12 text-center">
-                    <h2 class="section-heading">Any Query, Write To Us</h2>
-                    <h3 class="section-subheading text-muted">Taj Restaurant</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 col-sm-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                        <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
-                                <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Send Message</button>
-                            </div>
-                        </div> 
-                    </form>
-                </div>
-            </div>
-        </div>
 
-    </section> 
-<!--Contact Section Ends Here-->
  
 <!--Filter Button Starts Here  -->
- <button id="filterBtn" class="btn" onclick="showHide()"><i class="fas fa-filter fa-2x"></i></button>
+ <button id="filterBtn" class="btn"><i class="fas fa-filter fa-2x"></i></button>
   <section id="category-panel" class="animated fadeInUp">
+    <header id="vegsection">
+       
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="col-xs-6">
+            <p id="vegonly" for="">Veg</p>
+                <label class="switchb">
+                    <input type="checkbox" unchecked>
+                    <span class="sliderb round"></span>
+                </label>
+        </div>
+        <div class="col-xs-6">
+            <p id="vegonly" for="">Vegan</p>
+                <label class="switchb">
+                    <input type="checkbox" unchecked>
+                    <span class="sliderb round"></span>
+                </label>
+        </div>
+            </div>
+        </div>
+    </header>
      <div class="row">
-     <div class="col-xs-12"><p class="filter-item btn btn-default"><a href="#biryani">Biryani</a></p></div></div>
+         <div class="col-xs-9"><p class="filter-item btn btn-default"><a class="tan" href="#biryani">Biryanixncxnxcnjxcndcndcnmdcndckn</a></p></div>
+         <div class="col-xs-3"><p class="filter-item btn btn-default"><span class="aan">4</span></p></div>
+     </div>
+     
+     
      <hr style="border-top: 2px dashed #fff">
      <div class="row">
-     <div class="col-xs-12"><p class="filter-item btn btn-default"><a href="#snacks">Snacks</a></p></div></div>
+         <div class="col-xs-9"><p class="filter-item btn btn-default"><a class="tan" href="#snacks">Snacks</a></p></div>
+         <div class="col-xs-3"><p class="filter-item btn btn-default"><span class="aan">17</span></p></div>
+     </div>
+     
      <hr style="border-top: 2px dashed #fff">
      <div class="row">
-     <div class="col-xs-12"><p class="filter-item btn btn-default"><a href="#breads">Breads</a></p></div></div>
+         <div class="col-xs-9"><p class="filter-item btn btn-default"><a class="tan" href="#snacks">Snacks</a></p></div>
+         <div class="col-xs-3"><p class="filter-item btn btn-default"><span class="aan">4</span></p></div>
+     </div>
      <hr style="border-top: 2px dashed #fff">
      <div class="row">
-     <div class="col-xs-12"><p class="filter-item btn btn-default"><a href="#thali">Thali</a></p></div></div>
+         <div class="col-xs-9"><p class="filter-item btn btn-default"><a class="tan" href="#snacks">Snacks</a></p></div>
+         <div class="col-xs-3"><p class="filter-item btn btn-default"><span class="aan">4</span></p></div>
+     </div>
+     <hr style="border-top: 2px dashed #fff">
+     <div class="row">
+         <div class="col-xs-9"><p class="filter-item btn btn-default"><a class="tan" href="#snacks">Snacks</a></p></div>
+         <div class="col-xs-3"><p class="filter-item btn btn-default"><span class="aan">4</span></p></div>
+     </div>
+     <hr style="border-top: 2px dashed #fff">
+     <div class="row">
+         <div class="col-xs-9"><p class="filter-item btn btn-default"><a class="tan" href="#snacks">Snacks</a></p></div>
+         <div class="col-xs-3"><p class="filter-item btn btn-default"><span class="aan">4</span></p></div>
+     </div>
+     <hr style="border-top: 2px dashed #fff">
+     <div class="row">
+         <div class="col-xs-9"><p class="filter-item btn btn-default"><a class="tan" href="#snacks">Snacks</a></p></div>
+         <div class="col-xs-3"><p class="filter-item btn btn-default"><span class="aan">4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;th</span></p></div>
+     </div>
+
+     
     
   </section>     
 <!-- Filter Button Ends Here-->
-                 
+  
+<!--Fixed Place Order Button-->
+<div class=" row wrapper-place">
+    <div class="col-xs-12">
+       <a id="placeOrder" class="btn btn-lg counter-container" href="#"><span id="counter">1</span><i id="imgcart" class="fas fa-shopping-bag"></i>&nbsp; Place Order </a>
+    </div>
+</div>
+<!--Fixed Place Order Button Ends-->                  
+                                
+               
 <!--Footer Starts Here   -->
     <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4"><span class="copyright">© 2020 brinegdesign - Design ist meine Leidenschaft</span></div>
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                          <ul class="list-inline social-buttonsf">
                            <li>Follow Us:</li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a>
                             </li>
                             <li><a href="#">
-                                <i class="fa fa-facebook"></i>
+                                <i class="fab fa-facebook-f"></i>
                             </a>
                             </li>
                             <li><a href="#">
-                               <i class="fa fa-linkedin"></i>
+                               <i class="fab fa-linkedin"></i>
                             </a>
                             </li>
                         </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <ul class="list-inline quicklinks">
-                        <li><a href="#">Legal Notice</a>
-                        </li>
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                    </ul>
                     </div>
                 </div>
             </div>
         </footer>    
 <!--Footer Ends Here-->
+<div id="not-found" style="font-size: 22px;color: #FFECB1;text-align: center;font-weight: bold;margin-top: 10px;display: none">No Result Found</div>
+   <p id="extra" style="padding-bottom: 100px;display: none"></p>
 
-<!--Fixed Place Order Button-->
-<div class="row" id="placeOrder">
-    <div class="col-xs-12">
-        <button class="btn btn-block counter-container">
-        <span id="counter">1</span>
-        <i id="imgcart" class="fas fa-shopping-bag"></i>&nbsp; Place Order 
-        </button>
-    </div>
-</div>
-<!--Fixed Place Order Button Ends--> 
    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="Js/jquery.min.js"></script>
 	<script src="Js/menu.js"></script>
+	    
+
 	
-
-	<script>
-//Sticky Navbar Function
-        window.onscroll = function() {myFunction()};
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        }
-
-//Collapsible Button For Menu Details
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-        for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight){
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                } 
-            });
-        }
-        
-//Filter Button Categories Function
-        function showHide() {
-						  var x = document.getElementById("category-panel");
-						  if (x.style.display === "none") {
-						    x.style.display = "block";
-						  } else {
-						    x.style.display = "none";
-						  }
-						}
-        
-       
-        
-</script>
+	
 
 </body>
 
